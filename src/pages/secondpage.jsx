@@ -1,7 +1,9 @@
 import React from "react";
 const Secondpage = () => {
-  return <div className="h-screen w-screen bg-blue-600">secondpage</div>;
+  return <div className="h-screen w-full bg-gradient-to-r from-blue-400 to-white min-h-screen flex flex-col items-center overflow-x-hidden ">secondpage</div>;
 };
+
+
 
 export default Secondpage;
 

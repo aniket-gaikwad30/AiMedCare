@@ -10,7 +10,7 @@ const FirstPage = () => {
 flex flex-row items-center justify-between px-5 mx-auto overflow-hidden border-2 border-black"
 
       >
-        <img src="./logo.jpeg" className="h-20 rounded-4xl border-2 border-white" alt="" />
+        <img src="./logo.jpeg" className="h-20 rounded-4xl border-2 border-gray-700" alt="" />
 
         <div className="flex gap-10 text-black text-2xl relative left-10">
           <div className="hover:text-blue-950 font-500">Home</div>
@@ -40,7 +40,7 @@ hover:after:translate-y-0 hover:text-white transition-colors duration-300">
       <div className="flex flex-col   items-end  px-10 text-center">
         <h1 className="text-7xl font-bold mb-4 relative right-230 top-45">AiMedCare</h1>
 
-        <p className="text-2xl relative  font-serif right-4 top-95 w-[50%]">
+        <p className="text-2xl relative  font-inter font-600 right-4 top-95 w-[45%]">
           Your AI-powered health assistant designed to guide, analyze, predict,
           and support your well-being — all in one intelligent platform.
         </p>
