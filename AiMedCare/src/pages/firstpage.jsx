@@ -6,7 +6,7 @@ const FirstPage = () => {
       
       {/* Navbar */}
       <div
-        class="h-[20%] w-[95%] mt-5 bg-gradient-to-r from-blue-400 to-white rounded-3xl fixed z-10
+        class="h-[18%] w-[95%] mt-3 bg-gradient-to-r from-blue-400 to-white rounded-3xl fixed z-10
 flex flex-row items-center justify-between px-5 mx-auto overflow-hidden border-2 border-black"
 
       >
