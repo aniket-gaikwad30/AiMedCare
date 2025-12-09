@@ -19,5 +19,22 @@ export default function Chatbot() {
     document.body.appendChild(injectScript);
   }, []);
 
-  return <div id="aimedcare"></div>;
+ return (
+ <div
+  className="
+    fixed 
+    bottom-[3px] 
+    min-[770px]:bottom-[111px]
+    min-[770px]:w-[300px]
+    right-[76px] 
+    h-4 
+    w-100
+    bg-white
+  "
+  style={{ zIndex: 999999 }}
+/>
+
+);
+
 }
+ 

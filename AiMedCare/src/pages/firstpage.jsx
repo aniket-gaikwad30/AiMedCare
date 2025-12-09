@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const FirstPage = () => {
+   const navigate = useNavigate();
   return (
     <div className="h-screen w-full bg-gradient-to-r from-blue-400 to-white min-h-screen flex flex-col items-center overflow-x-hidden">
       
@@ -45,6 +47,10 @@ hover:after:translate-y-0 hover:text-white transition-colors duration-300">
           and support your well-being — all in one intelligent platform.
         </p>
       </div>
+       <button onClick={() => navigate("/chatbot")}>
+        Go to Home
+      </button>
+      
     </div>
   );
 };
