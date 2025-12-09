@@ -2,13 +2,13 @@ import { useEffect } from "react";
 
 export default function Chatbot() {
   useEffect(() => {
-    
+    if (typeof window === "undefined") return;
+
     const injectScript = document.createElement("script");
     injectScript.src = "https://cdn.botpress.cloud/webchat/v3.4/inject.js";
     injectScript.async = true;
 
     injectScript.onload = () => {
-      
       const botScript = document.createElement("script");
       botScript.src =
         "https://files.bpcontent.cloud/2025/10/30/16/20251030160507-3CDA1GGA.js";
@@ -16,25 +16,23 @@ export default function Chatbot() {
 
       document.body.appendChild(botScript);
     };
+
     document.body.appendChild(injectScript);
   }, []);
 
- return (
- <div
-  className="
-    fixed 
-    bottom-[3px] 
-    min-[770px]:bottom-[111px]
-    min-[770px]:w-[300px]
-    right-[76px] 
-    h-4 
-    w-100
-    bg-white
-  "
-  style={{ zIndex: 999999 }}
-/>
-
-);
-
+  return (
+    <div
+      className="
+        fixed 
+        bottom-[3px] 
+        min-[770px]:bottom-[111px]
+        min-[770px]:w-[300px]
+        right-[76px] 
+        h-4 
+        w-[100px]
+        bg-white
+      "
+      style={{ zIndex: 999999 }}
+    />
+  );
 }
- 
