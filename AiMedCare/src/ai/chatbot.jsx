@@ -1,38 +1,41 @@
 import { useEffect } from "react";
 
-export default function Chatbot() {
+const ChatBot = () => {
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    // Prevent duplicate initialization
+    if (window.botpress) return;
 
-    const injectScript = document.createElement("script");
-    injectScript.src = "https://cdn.botpress.cloud/webchat/v3.4/inject.js";
-    injectScript.async = true;
+    const script = document.createElement("script");
+    script.src = "https://cdn.botpress.cloud/webchat/v3.5/inject.js";
+    script.async = true;
 
-    injectScript.onload = () => {
-      const botScript = document.createElement("script");
-      botScript.src =
-        "https://files.bpcontent.cloud/2025/10/30/16/20251030160507-3CDA1GGA.js";
-      botScript.defer = true;
-
-      document.body.appendChild(botScript);
+    script.onload = () => {
+      window.botpress.init({
+        botId: "3bea9fe9-77f4-4b31-afae-8a16d636bc53",
+        clientId: "bc5356be-5dbe-4d8d-ba24-4d0768b21fc6",
+        configuration: {
+          version: "v2",
+          botName: "AIMEDCARE",
+          themeMode: "light",
+          color: "#199ff7",
+          variant: "solid",
+          headerVariant: "glass",
+          fontFamily: "inter",
+          radius: 4,
+          soundEnabled: false,
+          feedbackEnabled: false,
+          proactiveMessageEnabled: false,
+          footer: "AIMEDCARE",
+          additionalStylesheetUrl:
+            "https://files.bpcontent.cloud/2025/12/08/13/20251208133457-VQ8L3GRE.css",
+        },
+      });
     };
 
-    document.body.appendChild(injectScript);
+    document.body.appendChild(script);
   }, []);
 
-  return (
-    <div
-      className="
-        fixed 
-        bottom-[3px] 
-        min-[770px]:bottom-[111px]
-        min-[770px]:w-[300px]
-        right-[76px] 
-        h-4 
-        w-[100px]
-        bg-white
-      "
-      style={{ zIndex: 999999 }}
-    />
-  );
-}
+  return null;
+};
+
+export default ChatBot;

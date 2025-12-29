@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import chatbot from "../ai/chatbot"
 
 const FirstPage = () => {
    const navigate = useNavigate();
@@ -50,6 +51,7 @@ hover:after:translate-y-0 hover:text-white transition-colors duration-300">
        <button onClick={() => navigate("/chatbot")}>
         Go to Home
       </button>
+      
       
     </div>
   );
