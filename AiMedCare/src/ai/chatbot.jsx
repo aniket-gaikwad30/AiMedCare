@@ -11,8 +11,8 @@ const ChatBot = () => {
 
     script.onload = () => {
       window.botpress.init({
-        botId: "3bea9fe9-77f4-4b31-afae-8a16d636bc53",
-        clientId: "bc5356be-5dbe-4d8d-ba24-4d0768b21fc6",
+        botId:"3bea9fe9-77f4-4b31-afae-8a16d636bc53",
+        clientId:"bc5356be-5dbe-4d8d-ba24-4d0768b21fc6",
         configuration: {
           version: "v2",
           botName: "AIMEDCARE",
@@ -22,12 +22,11 @@ const ChatBot = () => {
           headerVariant: "glass",
           fontFamily: "inter",
           radius: 4,
-          soundEnabled: false,
-          feedbackEnabled: false,
+          soundEnabled: true,
+          feedbackEnabled: true,
           proactiveMessageEnabled: false,
-          footer: "AIMEDCARE",
-          additionalStylesheetUrl:
-            "https://files.bpcontent.cloud/2025/12/08/13/20251208133457-VQ8L3GRE.css",
+          footer: "⚡AIMEDCARE",
+          additionalStylesheetUrl:"https://files.bpcontent.cloud/2025/12/08/13/20251208133457-VQ8L3GRE.css",
         },
       });
     };
