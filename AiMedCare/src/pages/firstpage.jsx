@@ -4,6 +4,9 @@ import Chatbot from "../ai/chatbot";
 
 const FirstPage = () => {
   const navigate = useNavigate();
+  const redirect=()=>{
+    window.location.href = ".";
+  }
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-r from-blue-400 to-white overflow-x-hidden">
@@ -39,7 +42,9 @@ const FirstPage = () => {
                 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-full after:w-full
                 after:bg-black after:translate-y-full after:transition-all after:duration-300 after:z-[-1]
                 hover:after:translate-y-0 hover:text-white transition-colors duration-300"
-              >
+              onClick={()=>{
+                redirect()
+              }} >
                 {btn}
               </button>
             ))}
@@ -60,9 +65,6 @@ const FirstPage = () => {
         </p>
 
       </section>
-
-      {/* Chatbot */}
-      <Chatbot />
     </div>
   );
 };
