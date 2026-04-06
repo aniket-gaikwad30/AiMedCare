@@ -1,12 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Chatbot from "../ai/chatbot";
 
 const FirstPage = () => {
   const navigate = useNavigate();
-  const redirect=()=>{
-    window.location.href = ".";
-  }
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-r from-blue-400 to-white overflow-x-hidden">
@@ -34,20 +30,30 @@ const FirstPage = () => {
 
           {/* Buttons */}
           <div className="flex gap-4">
-            {["Sign in", "Sign up"].map((btn) => (
-              <button
-                key={btn}
-                className="relative overflow-hidden px-5 py-2 border border-gray-500 rounded-full 
+            <button
+              type="button"
+              className="relative overflow-hidden px-5 py-2 border border-gray-500 rounded-full 
                 font-medium text-gray-700
                 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-full after:w-full
                 after:bg-black after:translate-y-full after:transition-all after:duration-300 after:z-[-1]
                 hover:after:translate-y-0 hover:text-white transition-colors duration-300"
-              onClick={()=>{
-                redirect()
-              }} >
-                {btn}
-              </button>
-            ))}
+              onClick={() => navigate("/login")}
+            >
+              Sign in
+            </button>
+            <button
+              type="button"
+              className="relative overflow-hidden px-5 py-2 border border-gray-500 rounded-full 
+                font-medium text-gray-700
+                after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-full after:w-full
+                after:bg-black after:translate-y-full after:transition-all after:duration-300 after:z-[-1]
+                hover:after:translate-y-0 hover:text-white transition-colors duration-300"
+              onClick={() =>
+                navigate("/login", { state: { mode: "register" } })
+              }
+            >
+              Sign up
+            </button>
           </div>
         </div>
       </nav>

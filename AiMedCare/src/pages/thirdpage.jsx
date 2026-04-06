@@ -7,30 +7,37 @@ const Thirdpage = () => {
 
   const useCases = [
     {
+      icon: "🎓",
       title: "Students",
       desc: "Quick health advice during study hours, hostel sickness, and diet planning",
     },
     {
+      icon: "💼",
       title: "Working Professionals",
       desc: "Manage stress, medicine reminders, and lifestyle disease tracking",
     },
     {
+      icon: "👴",
       title: "Senior Citizens",
       desc: "Medicine reminders, diet suggestions, and easy symptom explanation",
     },
     {
+      icon: "🌾",
       title: "Rural Communities",
       desc: "Access basic medical guidance without expensive hospital visits",
     },
     {
+      icon: "🌍",
       title: "General Public",
       desc: "Quick health advice, diet planning, and lifestyle management",
     },
     {
+      icon: "🏥",
       title: "Hospitals & Clinics",
       desc: "Integration for patient triaging and early assessment",
     },
     {
+      icon: "⚕️",
       title: "Healthcare Providers",
       desc: "24/7 availability for patient queries and symptom checking",
     },
