@@ -23,9 +23,35 @@ const FirstPage = () => {
 
           {/* Nav Links */}
           <div className="flex gap-6 md:gap-10 text-lg md:text-2xl text-black">
-            <div className="hover:text-blue-950 cursor-pointer">Home</div>
-            <div className="hover:text-blue-950 cursor-pointer">About Us</div>
-            <div className="hover:text-blue-950 cursor-pointer">Contact Us</div>
+            <button
+              type="button"
+              className="hover:text-blue-950 cursor-pointer bg-transparent border-0 font-inherit"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Home
+            </button>
+            <button
+              type="button"
+              className="hover:text-blue-950 cursor-pointer bg-transparent border-0 font-inherit"
+              onClick={() =>
+                document
+                  .getElementById("about")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              About Us
+            </button>
+            <button
+              type="button"
+              className="hover:text-blue-950 cursor-pointer bg-transparent border-0 font-inherit"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Contact Us
+            </button>
           </div>
 
           {/* Buttons */}
@@ -69,7 +95,6 @@ const FirstPage = () => {
           Your AI-powered health assistant designed to guide, analyze, predict,
           and support your well-being — all in one intelligent platform.
         </p>
-
       </section>
     </div>
   );

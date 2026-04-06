@@ -73,6 +73,7 @@ const Thirdpage = () => {
 
   return (
     <div
+      id="use-cases"
       ref={containerRef}
       className="min-h-screen w-full bg-gradient-to-r from-blue-400 to-white flex flex-col items-center justify-center px-10 py-20"
     >

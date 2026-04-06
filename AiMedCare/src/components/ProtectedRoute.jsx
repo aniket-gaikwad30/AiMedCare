@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || "/api/auth";
 
 export default function ProtectedRoute({ children }) {
+  const location = useLocation();
   const [status, setStatus] = useState("checking");
 
   useEffect(() => {
@@ -32,7 +33,7 @@ export default function ProtectedRoute({ children }) {
   }
 
   if (status === "fail") {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/login" replace state={{ from: location }} />;
   }
 
   return children;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBrain } from "react-icons/fa";
-import { IoChevronBack, IoChevronForward, IoMoon, IoPulse } from "react-icons/io5";
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 const ASSESSMENTS = {
   stress: {

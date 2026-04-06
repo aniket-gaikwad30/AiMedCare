@@ -6,7 +6,7 @@ const ChatBot = () => {
     if (window.botpress) return;
 
     const script = document.createElement("script");
-    script.src = "https://cdn.botpress.cloud/webchat/v3.5/inject.js";
+    script.src = "https://cdn.botpress.cloud/webchat/v3.6/inject.js"; // ✅ updated CDN
     script.async = true;
 
     script.onload = () => {

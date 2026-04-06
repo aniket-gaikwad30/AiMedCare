@@ -45,7 +45,8 @@ export default function Auth() {
       }
 
       setSuccess("Signed in successfully");
-      navigate("/chatbot", { replace: true });
+      const next = "/dashboard";
+      navigate(next, { replace: true });
     } catch (err) {
       setError(err.message || "Something went wrong");
     } finally {
@@ -73,7 +74,8 @@ export default function Auth() {
       }
 
       setSuccess("Account created successfully");
-      navigate("/chatbot", { replace: true });
+      const next = "/dashboard";
+      navigate(next, { replace: true });
     } catch (err) {
       setError(err.message || "Something went wrong");
     } finally {

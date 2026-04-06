@@ -7,7 +7,10 @@ import Dashboard from "./pages/dashboard.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import ReportScreen from "./pages/ReportScreen.jsx";
 import AssessmentScreen from "./pages/AssessmentScreen.jsx";
-import StarRating from "./components/StarRating.jsx";
+import StarRating from "./pages/StarRating.jsx";
+import DietScreen from "./pages/DietScreen.jsx";
+import ReminderScreen from "./pages/ReminderScreen.jsx";
+import RiskScreen from "./pages/RiskScreen.jsx";
 
 export const App = () => {
   return (
@@ -16,7 +19,11 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/startrating" element={<StarRating />} />
+          <Route path="/dietscreen" element={<DietScreen />} />
+          <Route path="/riskscreen" element={<RiskScreen />} />
+          <Route path="/reminderscreen" element={<ReminderScreen />} />
           <Route path="/assesment" element={<AssessmentScreen />} />
+          <Route path="/assessment" element={<AssessmentScreen />} />
           <Route
             path="/chatbot"
             element={
@@ -25,7 +32,6 @@ export const App = () => {
               </ProtectedRoute>
             }
           />
-          <Route path="/" element={<ReportScreen />} />
           <Route
             path="/report"
             element={

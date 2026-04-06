@@ -43,7 +43,10 @@ const Secondpage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-r from-blue-400 to-white flex flex-col items-center justify-center px-10">
+    <div
+      id="about"
+      className="min-h-screen w-full bg-gradient-to-r from-blue-400 to-white flex flex-col items-center justify-center px-10"
+    >
       <h1 className="text-4xl font-bold mb-16 text-gray-800">
         Why Choose AIMedCare?
       </h1>

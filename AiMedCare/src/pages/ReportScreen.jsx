@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SAMPLE_RESULTS = [
   { name: "Hemoglobin", value: "13.5 g/dL", normal: "12-16 g/dL", status: "normal" },
@@ -9,6 +10,7 @@ const SAMPLE_RESULTS = [
 ];
 
 export default function ReportScreen() {
+  const navigate = useNavigate();
   const [image, setImage] = useState(null);
   const [analyzing, setAnalyzing] = useState(false);
   const [analyzed, setAnalyzed] = useState(false);
@@ -34,6 +36,13 @@ export default function ReportScreen() {
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center p-4">
       <div className="w-full max-w-md">
+        <button
+          type="button"
+          onClick={() => navigate(-1)}
+          className="mb-3 text-gray-700 hover:text-gray-900"
+        >
+          ← Back
+        </button>
 
         {/* Header */}
         <h2 className="text-xl font-semibold text-center mb-4">
