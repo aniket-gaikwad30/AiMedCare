@@ -26,7 +26,7 @@ export default function Dashboard() {
         <div className="flex flex-wrap gap-3">
           <button
             type="button"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/dashboard")}
             className="px-4 py-2 rounded-full border border-gray-600 text-gray-800 hover:bg-white/80 transition-colors"
           >
             Home

@@ -9,7 +9,7 @@ const SAMPLE_RESULTS = [
   { name: "WBC Count", value: "7.2 K/uL", normal: "4.5-11.0 K/uL", status: "normal" },
 ];
 
-export default function ReportScreen() {
+export default function ReportScreen(){
   const navigate = useNavigate();
   const [image, setImage] = useState(null);
   const [analyzing, setAnalyzing] = useState(false);

@@ -23,7 +23,7 @@ export default function ChatbotPage() {
       <header className="flex flex-wrap justify-end gap-3 p-4 border-b border-white/40 bg-white/30 backdrop-blur-sm">
         <button
           type="button"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/dashboard")}
           className="px-4 py-2 rounded-full border border-gray-600 text-gray-800 hover:bg-white/80 transition-colors"
         >
           Home
