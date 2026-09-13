@@ -11,6 +11,7 @@ import StarRating from "./pages/StarRating.jsx";
 import DietScreen from "./pages/DietScreen.jsx";
 import ReminderScreen from "./pages/ReminderScreen.jsx";
 import RiskScreen from "./pages/RiskScreen.jsx";
+import chatbot from "../src/ai/chatbot.jsx"
 
 export const App = () => {
   return (
@@ -51,6 +52,7 @@ export const App = () => {
           <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
+      <chatbot></chatbot>
     </div>
   );
 };
